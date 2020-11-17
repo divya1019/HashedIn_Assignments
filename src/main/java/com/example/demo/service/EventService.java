@@ -34,17 +34,6 @@ Logger logger = LoggerFactory.getLogger(EventService.class);
 		this.emf = emf;
 	}
 
-	/**
-	 * @param nVal
-	 * @param selectedDate
-	 * @param startDate
-	 * @param endDate
-	 * accepts nVal value and gets the n most viewed pages from DB
-	 * accepts selectedDate value and gets n most viewed pages based on selected date
-	 * accepts startDate & endDate and gets n most viewed pages within the time range
-	 * @return list of n most viewed pages
-	 * @throws custom exception if nVal is negative value / provided dates are invalid
-	 */
 	public List<EventDataTransfer> getMostViewedPages(int nVal,String selectedDate,String startDate,String endDate)
 	{
 		EntityManager em = emf.createEntityManager();
@@ -92,17 +81,6 @@ Logger logger = LoggerFactory.getLogger(EventService.class);
 		return result;
 	}
 	
-	/**
-	 * @param nVal
-	 * @param selectedDate
-	 * @param startDate
-	 * @param endDate
-	 * accepts nVal value and gets the n most time spent pages from DB
-	 * accepts selectedDate value and gets n most time spent pages based on selected date
-	 * accepts startDate & endDate and gets n most time spent pages within the time range
-	 * @return list of n most time spent pages
-	 * @throws custom exception if nUsers is negative value / provided dates are invalid
-	 */
 	public List<EventDataTransfer> getMostTimeSpentPages(int nVal,String selectedDate,String startDate,String endDate)
 	{
 		EntityManager em = emf.createEntityManager();
@@ -150,17 +128,6 @@ Logger logger = LoggerFactory.getLogger(EventService.class);
 		return result;
 	}
 	
-	/**
-	 * @param nUsers
-	 * @param selectedDate
-	 * @param startDate
-	 * @param endDate
-	 * accepts nUsers value and gets the n top time spent users from DB 
-	 * accepts selectedDate value and gets the top time spent users at that day
-	 * accepts startDate & endDate  and gets the top time spent users in these date range
-	 * @return list of n users who spent more time
-	 * @throws custom exception if nUsers is negative value / provided dates are invalid
-	 */
 	public List<UserDataTransfer> getMostTimeSpentUser(int nUsers, String selectedDate,String startDate,String endDate)
 	{
 		EntityManager em = emf.createEntityManager();
