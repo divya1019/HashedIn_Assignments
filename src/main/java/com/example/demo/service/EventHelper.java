@@ -325,13 +325,6 @@ public class EventHelper {
 		return requiredTopTimeSpentEvents;
 	}
 
-	/**
-	 * overloaded methods for the Events spent most time, services accepts no of
-	 * Events, selected date, and date range 
-	 * @param noOfEvents for generating the reports which contains noOfEvents records
-	 * @param date for processing the reports for the given date
-	 * @return List<String> Events list which are most time spent through
-	 */
 	public List<String> topMostTimeSpentEvents(int noOfEvents, String date) {
 		List<String> requiredTopTimeSpentEvents = new ArrayList<>();
 		try {
@@ -367,14 +360,6 @@ public class EventHelper {
 		return requiredTopTimeSpentEvents;
 	}
 
-	/**
-	 * overloaded methods for the Events spent most time, services accepts no of
-	 * Events, selected date, and date range 
-	 * @param noOfEvents for generating the reports which contains noOfEvents records
-	 * @param startDate for processing the reports from the given date
-	 * @param endDate for processing the reports till the given date
-	 * @return List<String> Events list which are most time spent through
-	 */
 	public List<String> topMostTimeSpentEvents(int noOfEvents, String startDate, String endDate) {
 		List<String> requiredTopTimeSpentEvents = new ArrayList<>();
 		try {
@@ -476,14 +461,7 @@ public class EventHelper {
 		return requiredTopMostSpentUsers;
 	}
 
-	/**
-	 * overloaded methods for the users who spent most time, services accepts no of
-	 * Events, selected date, and date range
-	 * 
-	 * @param noOfUsers for generating the reports which contains noOfUsers records
-	 * @param date for processing the reports for the given date
-	 * @return List<String> user ids list who are most time spent through
-	 */
+	
 	public List<String> topMostTimeSpentUsers1(int noOfUsers, String date) {
 		List<String> requiredTopMostSpentUsers = new ArrayList<>();
 		try {
@@ -521,15 +499,6 @@ public class EventHelper {
 		return requiredTopMostSpentUsers;
 	}
 
-	/**
-	 * overloaded methods for the users who spent most time, services accepts no of
-	 * Events, selected date, and date range
-	 * 
-	 * @param noOfUsers for generating the reports which contains noOfUsers records
-	 * @param startDate for processing the reports from the given date
-	 * @param endDate for processing the reports till the given date
-	 * @return List<String> user ids list who are most time spent through
-	 */
 	public List<String> topMostTimeSpentUsers(int noOfUsers, String startDate, String endDate) {
 		List<String> requiredTopMostSpentUsers = new ArrayList<>();
 
