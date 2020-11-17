@@ -27,11 +27,6 @@ Logger logger = LoggerFactory.getLogger(EventDAOService.class);
 	@Autowired
 	EventRepository eventsRepository;
 
-	/**
-	 * 
-	 * @param records
-	 * JPA DAO layer to persist the Events of data to the datasource
-	 */
 	public void saveEvents(List<Events> records)
 	{
 		try
@@ -47,10 +42,6 @@ Logger logger = LoggerFactory.getLogger(EventDAOService.class);
 		}
 	}
 
-	/**
-	 * Setting up the CSV reader with reader object and loading the csv file available
-	 * in the class path
-	 */
 	public void readCsvFile() {
 		Reader reader = null;
 		CSVReader csvReader = null;
@@ -79,11 +70,6 @@ Logger logger = LoggerFactory.getLogger(EventDAOService.class);
 	
 	}
 
-	/**
-	 * Takes the CsvReader object as argument and fetches each row of records and adds the data to list
-	 * calls the saveEvents method to save the records to the datasource.
-	 * @param csvReader : handles the reading of data.
-	 */
 	public void parseCsvFile(CSVReader csvReader) throws Exception
 	{
 		List<Events> csvRecords = new ArrayList<>();
@@ -105,12 +91,7 @@ Logger logger = LoggerFactory.getLogger(EventDAOService.class);
 	}
 
 
-	/**
-	 *  Method sets the data of csv to the entity class that can be saved using ORM to
-	 *  save the data to configured datasource.
-	 * @param tsv array contains the parsed data needs to be set to entity object
-	 * @return Page object to add in list of object and save using ORM
-	 */
+	
 	public Events getPageOnSet(String[] tsv) {
 		Events page = new Events();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
